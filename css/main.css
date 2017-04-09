@@ -1,0 +1,75 @@
+html,
+body,
+#Google-map {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+    margin: 0 auto;
+    background-color:#c2c2c2;
+}
+
+p {
+    font-size: 12px;
+    margin: 0px 0;
+    color: #7D7D7D;
+}
+
+ul {
+    list-style-type: none;
+    padding:0 0 0 5px;
+}
+
+li {
+    font-family: Helvetica, sans-serif;
+    padding:10px;
+}
+
+li:hover {
+    background-color: #7D7D7D; 
+    color: white;
+}
+
+#address_title{
+    text-align:center;
+    margin:0 auto;
+}
+#Google-map{
+    z-index:-10;
+}
+
+li{
+    padding:2px;
+    cursor:pointer;
+}
+
+#input {
+    width:95%;
+    height:30px;
+    border: 3px solid brown;
+    color:#7D7D7D;
+    font-weight:bold;
+}
+
+.filterNow {
+    margin: 5px 0px 0px 5px;
+    padding:10px;
+    background:orange;
+    border:0;
+    color:white;
+    cursor:pointer;
+}
+
+.filterNow:hover{
+    background-color: #bb8727;
+}
+
+#main_listContainer {
+    display:block;
+    z-index: 1000;
+    width:22%;
+    height:40%;
+    background-color:white;
+    min-width: 245.391px;
+    min-height: 247px;
+}

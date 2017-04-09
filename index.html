@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Geo-Eats</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div id="Google-map"></div>
+    <div id="main_listContainer">
+        <div id="search-nav">
+            <input id="input" placeholder="Filter a search" type="input" data-bind="value: locSearch, valueUpdate: 'afterkeydown', event: {keyup: filter}">
+          
+            <button class="filterNow" data-bind="click: reset">Reset List</button>
+            <ul id="main_list" data-bind="foreach: markers">
+                <div data-bind="visible: visible">
+                        <a href="#" data-bind="attr: {id: id}">
+                            <li>
+                                <strong data-bind="text: business, click: $parent.restaurantClick"></strong>
+                            </li>
+                        </a>
+                    </div>
+            </ul>
+        </div>
+     
+       
+    </div>
+    
+    <script type="text/javascript">
+      function pinPoint(){
+        myLatLng = {lat: 37.773972, lng: -122.431297};
+        map = new google.maps.Map(document.getElementById('Google-map'), {
+        center: myLatLng,
+        zoom: 13
+        });
+        // Add restaurant markers to the map
+        //pinMarkers();
+      }
+    </script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCVd0uzekiMlRZ86ae_OO3EzmQwmC_o_G0&callback=pinPoint"></script>
+    <script type="text/javascript" src="js/knockout.js"></script>
+    <script src="js/oauth-signature.js"></script>
+    <script async type="text/javascript" src="js/app.js"></script>
+</body>
+</html>
